@@ -78,13 +78,13 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
                 onOpenCalModal();
                 sendGTMEvent({ event: 'open_calendar', ubicacion: 'hero' });
               }}
-              className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] lowercase tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
+              className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
             >
               Agendar llamada
             </button>
             <a
               href="#soluciones"
-              className="px-6 py-3 sm:px-10 sm:py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[11px] sm:text-[12px] lowercase tracking-tight rounded-full hover:bg-white/10 transition-all text-center"
+              className="px-6 py-3 sm:px-10 sm:py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:bg-white/10 transition-all text-center"
             >
               Explorar soluciones
             </a>
