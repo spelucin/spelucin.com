@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google'
 
 interface ContactSectionProps {
   onOpenCalModal: () => void;
@@ -32,8 +33,11 @@ export default function ContactSection({ onOpenCalModal }: ContactSectionProps) 
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button
-              onClick={onOpenCalModal}
-              className="px-10 py-4 bg-primary text-primary-foreground font-inter font-bold text-[12px] rounded-full hover:opacity-90 shadow-2xl shadow-primary/20 transition-all uppercase tracking-[0.2em]"
+               onClick={() => {
+                 onOpenCalModal();
+                 sendGTMEvent({ event: 'open_calendar', ubicacion: 'final_cta' });
+               }}
+               className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] rounded-full hover:opacity-90 shadow-2xl shadow-primary/20 transition-all lowercase tracking-tight"
             >
               Reservar diagnóstico técnico ///
             </button>

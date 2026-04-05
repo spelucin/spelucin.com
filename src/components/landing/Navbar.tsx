@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google'
 import Image from 'next/image';
 
 const navItems = [
@@ -72,8 +73,11 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
                 />
               </div>
               <button
-                onClick={onOpenCalModal}
-                className="px-5 py-2 text-[12px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity uppercase tracking-wider"
+                onClick={() => {
+                  onOpenCalModal();
+                  sendGTMEvent({ event: 'open_calendar', ubicacion: 'nav' });
+                }}
+                className="px-4 py-1.5 text-[11px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity tracking-tight"
               >
                 Agenda una llamada
               </button>
@@ -101,8 +105,11 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
               </a>
             ))}
             <button
-              onClick={onOpenCalModal}
-              className="ml-1 px-6 py-2 text-[13px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-sm uppercase tracking-wider"
+              onClick={() => {
+                onOpenCalModal();
+                sendGTMEvent({ event: 'open_calendar', ubicacion: 'nav' });
+              }}
+              className="ml-1 px-6 py-2 text-[13px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-sm tracking-tight"
             >
               Agenda una llamada
             </button>

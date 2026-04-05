@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google'
 import Image from 'next/image';
 
 const clientLogos = [
@@ -73,14 +74,17 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             className="flex flex-row items-center justify-start gap-4 mb-24"
           >
             <button
-              onClick={onOpenCalModal}
-              className="px-10 py-4 bg-primary text-primary-foreground font-inter font-bold text-[12px] uppercase tracking-[0.2em] rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
+              onClick={() => {
+                onOpenCalModal();
+                sendGTMEvent({ event: 'open_calendar', ubicacion: 'hero' });
+              }}
+              className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] lowercase tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
             >
               Agendar llamada
             </button>
             <a
               href="#soluciones"
-              className="px-10 py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[12px] uppercase tracking-[0.2em] rounded-full hover:bg-white/10 transition-all text-center"
+              className="px-6 py-3 sm:px-10 sm:py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[11px] sm:text-[12px] lowercase tracking-tight rounded-full hover:bg-white/10 transition-all text-center"
             >
               Explorar soluciones
             </a>

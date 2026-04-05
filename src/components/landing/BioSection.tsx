@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google'
 import { Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
 
@@ -34,6 +35,7 @@ export default function BioSection() {
                 href="https://www.linkedin.com/in/spelucin/"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => sendGTMEvent({ event: 'social_link_click', site: 'linkedin' })}
                 className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/[0.03] border border-white/10 hover:border-primary/50 hover:bg-white/[0.08] transition-all duration-300"
                 aria-label="LinkedIn"
               >
@@ -43,6 +45,7 @@ export default function BioSection() {
                 href="https://github.com/spelucin"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => sendGTMEvent({ event: 'social_link_click', site: 'github' })}
                 className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/[0.03] border border-white/10 hover:border-primary/50 hover:bg-white/[0.08] transition-all duration-300"
                 aria-label="GitHub"
               >
@@ -50,6 +53,7 @@ export default function BioSection() {
               </a>
               <a
                 href="mailto:hola@spelucin.com"
+                onClick={() => sendGTMEvent({ event: 'email_link_click' })}
                 className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/[0.03] border border-white/10 hover:border-primary/50 hover:bg-white/[0.08] transition-all duration-300"
                 aria-label="Email"
               >

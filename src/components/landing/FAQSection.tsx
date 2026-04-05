@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google'
 import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
@@ -61,7 +62,13 @@ export default function FAQSection() {
                 className="border border-white/5 rounded-[24px] overflow-hidden bg-white/[0.015] backdrop-blur-md group hover:border-white/10 transition-all duration-300"
               >
                 <button
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  onClick={() => {
+                    const isOpening = openIndex !== i;
+                    setOpenIndex(isOpening ? i : null);
+                    if (isOpening) {
+                      sendGTMEvent({ event: 'open_faq', faq_index: i });
+                    }
+                  }}
                   className="w-full flex items-center justify-between p-8 text-left hover:bg-white/[0.02] transition-all"
                 >
                   <span className="text-sm sm:text-base font-inter font-bold text-white tracking-tight leading-snug pr-8 group-hover:text-primary transition-colors">

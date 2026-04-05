@@ -1,4 +1,5 @@
 "use client"
+import { sendGTMEvent } from '@next/third-parties/google'
 
 export default function Footer() {
   return (
@@ -18,6 +19,7 @@ export default function Footer() {
 
         <a
           href="mailto:hola@spelucin.com"
+          onClick={() => sendGTMEvent({ event: 'email_link_click' })}
           className="text-xs font-mono text-muted-foreground/60 hover:text-primary transition-colors"
         >
           hola@spelucin.com
