@@ -4,58 +4,64 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: 'Desde que implementamos la medición server-side, recuperamos el 72% de las conversiones que estábamos perdiendo. El ROI de nuestras campañas finalmente refleja la realidad.',
-    name: 'Carla Mendoza',
-    role: 'Directora de Performance, Agencia Nexo',
+    quote: "La precisión de nuestros datos pasó del 60% al 98% en solo un mes. Fue el cambio más rentable del año.",
+    author: "Ricardo Gómez",
+    role: "CEO en Marketing Hub",
   },
   {
-    quote: 'La auditoría reveló 14 puntos ciegos en nuestro tracking. En 3 semanas, Alex optimizó toda nuestra infraestructura. Los reportes ahora generan confianza real con los clientes.',
-    name: 'Martín Herrera',
-    role: 'CEO, Studio Digital Lab',
+    quote: "Por fin tenemos una infraestructura de medición que no se rompe con cada actualización de Google o Facebook.",
+    author: "Mariana Costa",
+    role: "Directora de Paid Media",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+      <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="text-left mb-20 max-w-2xl"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full border border-border text-xs font-mono text-muted-foreground tracking-wide mb-4">
-            TESTIMONIOS
+          <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
+            TESTIMONIOS ///
           </span>
-          <h2 className="font-inter font-bold text-3xl sm:text-4xl text-foreground tracking-tight">
-            Resultados que hablan por sí solos
+          <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
+            Resultados que hablan por sí mismos.
           </h2>
+          <p className="mt-8 text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter">
+            Agencias que han transformado su rentabilidad recuperando la visibilidad total de sus datos y campañas.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((t, i) => (
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          {testimonials.map((item, i) => (
             <motion.div
-              key={i}
+              key={item.author}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="rounded-2xl border border-border/60 bg-card/30 backdrop-blur-sm p-8"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="p-10 md:p-12 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-sm group hover:border-primary/20 transition-all duration-500"
             >
-              <p className="text-foreground/90 text-base leading-relaxed font-inter mb-8">
-                "{t.quote}"
+              <div className="mb-8 flex gap-1.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-primary/60 group-hover:text-primary transition-colors duration-500">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-sm sm:text-base md:text-lg text-white/60 font-inter italic mb-10 leading-relaxed group-hover:text-white transition-colors duration-500">
+                "{item.quote}"
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center">
-                  <span className="text-sm font-inter font-semibold text-muted-foreground">
-                    {t.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="text-sm font-inter font-semibold text-foreground">{t.name}</p>
-                  <p className="text-xs font-inter text-muted-foreground">{t.role}</p>
-                </div>
+              <div>
+                <p className="font-inter font-bold text-white text-base tracking-tight">{item.author}</p>
+                <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em] mt-2 font-bold group-hover:text-primary/60 transition-colors duration-500">
+                  {item.role}
+                </p>
               </div>
             </motion.div>
           ))}

@@ -2,43 +2,42 @@
 
 import { motion } from 'framer-motion';
 
-export default function ContactSection() {
-  return (
-    <section id="contacto" className="relative py-28 px-6 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-primary/8 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-[300px] h-[200px] rounded-full bg-purple-500/5 blur-[80px] pointer-events-none" />
+interface ContactSectionProps {
+  onOpenCalModal: () => void;
+}
 
-      <div className="relative z-10 max-w-2xl mx-auto text-center">
+export default function ContactSection({ onOpenCalModal }: ContactSectionProps) {
+  return (
+    <section id="contacto" className="relative py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5 overflow-hidden">
+      {/* Resplandor nébula centrado para la sección final */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full bg-primary/20 blur-[140px] opacity-20 pointer-events-none" />
+
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          className="max-w-3xl"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full border border-border text-xs font-mono text-muted-foreground tracking-wide mb-6">
-            DIAGNÓSTICO PRELIMINAR
+          <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
+            CONTACTO ///
           </span>
-
-          <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-foreground tracking-tight mb-6 leading-tight">
-            Agenda una sesión de 20 minutos
+          <h2 className="font-inter font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tighter leading-[1.05] mb-8">
+            Mejoramos tu medición hoy mismo.
           </h2>
-
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed font-inter mb-10 max-w-lg mx-auto">
-            Revisaremos tu caso actual sin compromisos y con total transparencia. 
-            Un diagnóstico técnico preliminar para entender dónde están tus oportunidades de mejora.
+          <p className="text-sm sm:text-base md:text-lg text-white/40 leading-relaxed font-inter mb-12 max-w-2xl mx-auto">
+            Agenda una llamada de 15 minutos para diagnosticar el estado de tu medición y encontrar las fugas de datos que están limitando el crecimiento de tu agencia.
           </p>
 
-          <a
-            href="mailto:hola@spelucin.com"
-            className="inline-block px-10 py-4 bg-primary text-primary-foreground font-inter font-semibold text-base rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/25"
-          >
-            Agendar llamada
-          </a>
-
-          <p className="text-xs font-mono text-muted-foreground/50 mt-6">
-            Sin compromiso. 100% transparencia.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <button
+              onClick={onOpenCalModal}
+              className="px-10 py-4 bg-primary text-primary-foreground font-inter font-bold text-[12px] rounded-full hover:opacity-90 shadow-2xl shadow-primary/20 transition-all uppercase tracking-[0.2em]"
+            >
+              Agendar llamada de diagnóstico ///
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>

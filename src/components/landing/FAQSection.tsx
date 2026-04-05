@@ -2,102 +2,97 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    q: '¿Qué tipo de agencias pueden trabajar contigo?',
-    a: 'Trabajo con agencias de marketing digital en Latinoamérica que gestionan campañas de performance para clientes. No importa el tamaño, lo que importa es que quieran tomar decisiones basadas en datos confiables.',
+    question: "¿En cuánto tiempo se ven los resultados?",
+    answer: "Los resultados en términos de visibilidad de datos suelen ser inmediatos tras la implementación técnica. La optimización de campañas basada en estos nuevos datos suele mostrar mejoras significativas en el ROI en los primeros 30 a 60 días.",
   },
   {
-    q: '¿Cuánto tiempo tarda una auditoría de medición?',
-    a: 'Una auditoría completa toma entre 5 y 10 días hábiles, dependiendo de la complejidad de tu stack actual. Al final recibes un informe detallado con todos los puntos críticos identificados y un plan de acción.',
+    question: "¿Necesito cambiar mis herramientas actuales?",
+    answer: "No necesariamente. Mi enfoque es optimizar tu stack actual (Google Analytics 4, Tag Manager, Facebook CAPI) y asegurar que trabajen correctamente antes de sugerir herramientas adicionales.",
   },
   {
-    q: '¿Qué es la medición server-side y por qué la necesito?',
-    a: 'Es una arquitectura donde los eventos de conversión se envían desde tu servidor en lugar del navegador del usuario. Esto elimina el impacto de los bloqueadores de anuncios, las restricciones de iOS 14 y la pérdida de cookies de terceros, recuperando entre el 30% y el 70% de datos que antes perdías.',
+    question: "¿Qué pasa si ya tengo un equipo técnico?",
+    answer: "Trabajo en conjunto con ellos. Mi rol es estratégico y de especialización profunda. Aporto la arquitectura técnica y las mejores prácticas que ahorran meses de ensayo y error a tu equipo interno.",
   },
   {
-    q: '¿Puedo cambiar de plan si mi agencia crece?',
-    a: 'Sí. Los planes están diseñados para escalar contigo. Al subir de nivel, el Setup Fee se reduce automáticamente para reconocer el valor de nuestra relación a largo plazo.',
-  },
-  {
-    q: '¿Trabajas con plataformas específicas?',
-    a: 'Trabajo con Google Tag Manager, GA4, Meta Pixel, Google Ads, TikTok Ads, y sistemas server-side como Stape, Conversion API y Google Cloud. Si usas otra plataforma, lo evaluamos juntos en la sesión de diagnóstico.',
-  },
-  {
-    q: '¿Cómo es la sesión de diagnóstico preliminar?',
-    a: 'Es una videollamada de 20 minutos donde revisamos tu situación actual: qué herramientas usas, qué datos estás perdiendo y qué oportunidades existen. Sin compromiso y sin costo.',
+    question: "¿Cómo garantizan la privacidad de los datos?",
+    answer: "Cumplimos estrictamente con GDPR y leyes locales. La medición server-side que implementamos está diseñada precisamente para respetar la privacidad del usuario mientras recuperamos la atribución necesaria para el negocio.",
   },
 ];
 
-function FAQItem({ item, isOpen, onToggle }) {
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
-    <div className="border border-border/60 rounded-2xl overflow-hidden">
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-secondary/30 transition-colors"
-      >
-        <span className="font-inter font-medium text-sm sm:text-base text-foreground">{item.q}</span>
-        <div className={`shrink-0 w-7 h-7 rounded-full border border-border/60 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-45 border-primary/50 bg-primary/10' : ''}`}>
-          <Plus className={`w-3.5 h-3.5 transition-colors ${isOpen ? 'text-primary' : 'text-muted-foreground'}`} />
-        </div>
-      </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
+    <section id="faq" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24 items-start">
+          {/* Columna Izquierda: Encabezado */}
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-left"
           >
-            <p className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed font-inter border-t border-border/40 pt-4">
-              {item.a}
+            <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
+              PREGUNTAS FRECUENTES ///
+            </span>
+            <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
+              Resolviendo tus dudas.
+            </h2>
+            <p className="mt-8 text-sm text-white/40 leading-relaxed font-inter max-w-sm">
+              Todo lo que necesitas saber sobre el proceso de optimización, implementación y consultoría estratégica de datos.
             </p>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
 
-export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(null);
+          {/* Columna Derecha: Acordeón */}
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="border border-white/5 rounded-[24px] overflow-hidden bg-white/[0.015] backdrop-blur-md group hover:border-white/10 transition-all duration-300"
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="w-full flex items-center justify-between p-8 text-left hover:bg-white/[0.02] transition-all"
+                >
+                  <span className="text-sm sm:text-base font-inter font-bold text-white tracking-tight leading-snug pr-8 group-hover:text-primary transition-colors">
+                    {faq.question}
+                  </span>
+                  <div className={`shrink-0 transition-transform duration-500 rounded-full border border-white/5 p-1 ${openIndex === i ? 'rotate-180 bg-primary/10 border-primary/20' : 'group-hover:border-white/20'}`}>
+                    {openIndex === i ? (
+                      <Minus className="w-4 h-4 text-primary" />
+                    ) : (
+                      <Plus className="w-4 h-4 text-white/20" />
+                    )}
+                  </div>
+                </button>
 
-  return (
-    <section id="faq" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="inline-block px-4 py-1.5 rounded-full border border-border text-xs font-mono text-muted-foreground tracking-wide mb-4">
-            FAQ
-          </span>
-          <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-foreground tracking-tight">
-            Preguntas frecuentes
-          </h2>
-        </motion.div>
-
-        <div className="max-w-3xl mx-auto space-y-3">
-          {faqs.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.4 }}
-            >
-              <FAQItem
-                item={item}
-                isOpen={openIndex === i}
-                onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              />
-            </motion.div>
-          ))}
+                <AnimatePresence>
+                  {openIndex === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                    >
+                      <div className="px-8 pb-8 text-sm text-white/40 font-inter leading-relaxed max-w-2xl border-t border-white/[0.03] pt-6">
+                        {faq.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
