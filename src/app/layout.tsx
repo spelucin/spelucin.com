@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
   description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
   metadataBase: new URL('https://spelucin.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
     description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
     url: 'https://spelucin.com',
     images: [
       {
-        url: '/img/og-image.png',
+        url: '/img/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Alex Spelucin - Consultor de Analítica Digital'
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
     description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
-    images: ['/img/og-image.png'],
+    images: ['/img/og-image.jpg'],
   },
   icons: {
     icon: [
