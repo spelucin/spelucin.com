@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "Recuperamos la visibilidad del 25% de nuestras ventas que las plataformas simplemente no veían. Alex es nuestro brazo técnico de confianza.",
-    author: "Ricardo Gómez",
-    role: "CEO en Marketing Hub",
+    quote: "Creó nuestro dashboard de analytics asegurándose de que todo estuviera estructurado y funcionando a la perfección. Resolvió problemas de tracking que no teníamos mapeados y dejó todas las conexiones listas. ¡Totalmente recomendado!",
+    author: "Milagros Meier",
+    role: "Growth Lead @ Laboratoria",
   },
   {
-    quote: "Dejamos de discutir por los números en las reuniones de reporte. Ahora la data es irrefutable y el cliente lo nota.",
-    author: "Mariana Costa",
-    role: "Directora de Paid Media",
+    quote: "Su extenso conocimiento técnico logra intersecciones fascinantes entre SEO y tecnología. Automatizó nuestra reportería manteniendo siempre el foco en el crecimiento del negocio y los objetivos del cliente.",
+    author: "Darío Vergara",
+    role: "SEO Lead @ Attach Media",
   },
 ];
 
