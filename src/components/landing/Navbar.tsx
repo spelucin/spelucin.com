@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Servicios', href: '#soluciones' },
   { label: 'Precios', href: '#precios' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Proceso', href: '#proceso' },
+  { label: 'Testimonios', href: '#testimonios' },
+  { label: 'Acerca de', href: '#nosotros' },
 ];
 
 interface NavbarProps {
@@ -25,9 +27,12 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
 
   const logoMarkup = (
     <a href="#" className="flex items-center gap-2">
-      <img 
+      <Image 
         src="/img/logo.png" 
         alt="Alex Spelucin Logo" 
+        width={140}
+        height={35}
+        priority
         className="h-7 w-auto"
       />
     </a>
@@ -54,12 +59,15 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
           {/* Diseño Móvil (Logo + CTA dentro de una pill única) */}
           <div className="md:hidden w-full pointer-events-auto">
             <div className={`flex items-center justify-between w-full px-5 py-2.5 rounded-full border border-white/5 transition-all duration-500 backdrop-blur-2xl ${
-              scrolled ? 'bg-white/[0.03] shadow-2xl shadow-black/40' : 'bg-transparent'
+              scrolled ? 'bg-background/80 shadow-2xl shadow-black/40' : 'bg-transparent'
             }`}>
               <div className="h-5 w-auto">
-                <img 
+                <Image 
                   src="/img/logo.png" 
                   alt="Logo" 
+                  width={100}
+                  height={25}
+                  priority
                   className="h-full w-auto"
                 />
               </div>
@@ -67,7 +75,7 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
                 onClick={onOpenCalModal}
                 className="px-5 py-2 text-[12px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity uppercase tracking-wider"
               >
-                Agendar llamada
+                Agenda una llamada
               </button>
             </div>
           </div>
@@ -79,24 +87,24 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
 
           {/* Navbar tipo Pill escritorio (Fija a la derecha) */}
           <nav
-            className={`hidden md:flex items-center gap-1.5 px-2 py-2 rounded-full border border-white/5 transition-all duration-500 pointer-events-auto backdrop-blur-2xl ${
-              scrolled ? 'bg-white/[0.03] shadow-2xl shadow-black/40' : 'bg-transparent'
+            className={`hidden md:flex items-center gap-1.5 px-2 py-2 rounded-full border border-border transition-all duration-500 pointer-events-auto backdrop-blur-2xl ${
+              scrolled ? 'bg-background/80 shadow-2xl shadow-black/40' : 'bg-transparent'
             }`}
           >
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="px-5 py-2 text-[13px] font-inter font-semibold text-muted-foreground/80 hover:text-white transition-colors rounded-full hover:bg-white/[0.03]"
+                className="px-5 py-2 text-[13px] font-inter font-semibold text-white/50 hover:text-white transition-colors rounded-full hover:bg-white/[0.03]"
               >
                 {item.label}
               </a>
             ))}
             <button
               onClick={onOpenCalModal}
-              className="ml-1 px-6 py-2 text-[13px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-sm"
+              className="ml-1 px-6 py-2 text-[13px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-sm uppercase tracking-wider"
             >
-              Agendar llamada
+              Agenda una llamada
             </button>
           </nav>
         </div>

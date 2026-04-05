@@ -2,7 +2,9 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;@layer base {
+@tailwind utilities;
+
+@layer base {
   :root {
     --background: 220 20% 8%;
     --foreground: 210 40% 98%;
@@ -23,6 +25,14 @@
     --border: 220 18% 14%;
     --input: 220 18% 14%;
     --ring: 145 38% 76%;
+    
+    /* Branding Colors (HSL) */
+    --brand-hubspot: 12 100% 67%;
+    --brand-meta: 214 95% 45%;
+    --brand-google-ads: 42 100% 49%;
+    --brand-google-analytics: 42 100% 49%;
+    --brand-gtm: 215 75% 50%;
+    
     --chart-1: 145 38% 76%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;

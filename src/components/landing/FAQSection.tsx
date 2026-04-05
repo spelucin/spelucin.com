@@ -27,7 +27,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+    <section id="faq" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24 items-start">
           {/* Columna Izquierda: Encabezado */}
@@ -36,7 +36,7 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-left"
+            className="text-left pt-2"
           >
             <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
               PREGUNTAS FRECUENTES ///

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}", "./src/app/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
   		fontFamily: {
@@ -47,6 +47,13 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			brand: {
+  				hubspot: 'hsl(var(--brand-hubspot))',
+  				meta: 'hsl(var(--brand-meta))',
+  				'google-ads': 'hsl(var(--brand-google-ads))',
+  				'google-analytics': 'hsl(var(--brand-google-analytics))',
+  				gtm: 'hsl(var(--brand-gtm))'
+  			},
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',

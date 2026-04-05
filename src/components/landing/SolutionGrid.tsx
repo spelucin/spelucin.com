@@ -28,7 +28,7 @@ const solutions = [
 
 export default function SolutionGrid() {
   return (
-    <section id="soluciones" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+    <section id="soluciones" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Bloque de encabezado editorial */}
         <motion.div

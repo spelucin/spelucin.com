@@ -9,7 +9,7 @@ interface ProblemSectionProps {
 
 export default function ProblemSection({ onOpenCalModal }: ProblemSectionProps) {
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+    <section id="problema" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

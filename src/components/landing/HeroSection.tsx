@@ -1,12 +1,13 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const clientLogos = [
-  { name: 'Attach', src: '/img/client-logos/attach.svg', className: "h-5 sm:h-6" },
-  { name: 'Notebook', src: '/img/client-logos/notebook.svg', className: "h-5 sm:h-6" },
-  { name: 'Owlbox', src: '/img/client-logos/owlbox.png', className: "h-4 sm:h-5 opacity-80" },
-  { name: 'Picnic', src: '/img/client-logos/picnic.svg', className: "h-3.5 sm:h-4.5" },
+  { name: 'Attach', src: '/img/client-logos/attach.svg', width: 120, height: 24, className: "h-5 sm:h-6" },
+  { name: 'Notebook', src: '/img/client-logos/notebook.svg', width: 120, height: 24, className: "h-5 sm:h-6" },
+  { name: 'Owlbox', src: '/img/client-logos/owlbox.png', width: 100, height: 20, className: "h-4 sm:h-5 opacity-80" },
+  { name: 'Picnic', src: '/img/client-logos/picnic.svg', width: 90, height: 18, className: "h-3.5 sm:h-4.5" },
 ];
 
 interface HeroSectionProps {
@@ -91,14 +92,20 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
           </div>
           <div className="flex items-center gap-8 md:gap-14 flex-wrap select-none opacity-40">
             {clientLogos.map((logo) => (
-              <div key={logo.name} className="brightness-0 invert hover:opacity-100 transition-all duration-500 flex items-center">
-                <motion.img 
+              <motion.div 
+                key={logo.name} 
+                className="brightness-0 invert hover:opacity-100 transition-all duration-500 flex items-center"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image 
                   src={logo.src} 
                   alt={logo.name} 
-                  whileHover={{ scale: 1.05 }}
+                  width={logo.width}
+                  height={logo.height}
+                  priority
                   className={`${logo.className} w-auto object-contain`}
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

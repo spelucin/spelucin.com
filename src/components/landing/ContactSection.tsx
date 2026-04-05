@@ -8,7 +8,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ onOpenCalModal }: ContactSectionProps) {
   return (
-    <section id="contacto" className="relative py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5 overflow-hidden">
+    <section id="contacto" className="relative py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background overflow-hidden">
       {/* Resplandor nébula centrado para la sección final */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full bg-primary/20 blur-[140px] opacity-20 pointer-events-none" />
 

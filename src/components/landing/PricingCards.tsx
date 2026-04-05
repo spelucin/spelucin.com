@@ -79,7 +79,7 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
   ) || tiers[0];
 
   return (
-    <section id="precios" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
+    <section id="precios" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -110,7 +110,7 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] -z-10 rounded-full translate-x-1/3 -translate-y-1/3 opacity-30" />
             
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
               {/* Left Column: Calculator */}
               <div className="space-y-12">
                 <div>
@@ -188,8 +188,8 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
                 {/* CTA Removed as requested */}
               </div>
 
-              {/* Right Column: Features (taking more presence) */}
-              <div className="lg:pl-16 lg:border-l border-white/5 flex flex-col justify-center">
+              {/* Right Column: Features - Aligned to TOP as requested */}
+              <div className="lg:pl-16 lg:border-l border-white/5 flex flex-col justify-start pt-2 lg:pt-0">
                 <div className="mb-10">
                   <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-primary/60 font-bold mb-2 block">
                     {currentTier.label}
@@ -225,4 +225,3 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
     </section>
   );
 }
-

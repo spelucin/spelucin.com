@@ -27,7 +27,7 @@ export default function ProcessSection() {
   const visuals = [DataLayerVisual, GA4Visual, FlowchartVisual, DashboardVisual];
 
   return (
-    <section className="relative bg-background border-t border-white/5 pt-24 sm:pt-32 pb-12 sm:pb-16 px-6 sm:px-12">
+    <section id="proceso" className="relative bg-background border-t border-border pt-24 sm:pt-32 pb-12 sm:pb-16 px-6 sm:px-12">
       <div className="max-w-6xl mx-auto mb-16 md:mb-24">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
@@ -60,10 +60,10 @@ export default function ProcessSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
               style={{ top: `${topOffset}px` }}
-              className="flex flex-col lg:flex-row bg-[#0A0D14] border border-white/5 rounded-3xl overflow-hidden sticky shadow-[0_0_40px_rgba(var(--primary-rgb,16,185,129),0.12),0_8px_32px_rgba(0,0,0,0.6)]"
+              className="flex flex-col lg:flex-row bg-card border border-white/5 rounded-3xl overflow-hidden sticky shadow-[0_0_40px_rgba(var(--primary),0.08),0_8px_32px_rgba(0,0,0,0.6)]"
             >
-              {/* Content Side */}
-              <div className="w-full lg:w-5/12 p-6 sm:p-8 lg:pr-12 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col justify-center">
+              {/* Content Side - Aligned to top as requested */}
+              <div className="w-full lg:w-5/12 p-6 sm:p-8 lg:pr-12 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col justify-start pt-10 sm:pt-12">
                  <div className="flex items-center gap-3 mb-2 mt-0">
                    <span className="font-mono text-primary font-bold text-sm tracking-widest">
                      00{index + 1}
@@ -144,7 +144,7 @@ function GA4Visual() {
         <div className="w-full max-w-sm bg-[#f8f9fa] dark:bg-[#1a1a1a] rounded-xl border border-white/10 shadow-2xl overflow-hidden flex flex-col h-full min-h-[260px] max-h-[300px]">
           <div className="p-3 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-white/50 dark:bg-black/20 shrink-0">
             <div className="flex items-center gap-2">
-               <SiGoogleanalytics className="text-[#F9AB00] w-4 h-4" />
+               <SiGoogleanalytics className="text-brand-google-analytics w-4 h-4" />
                <span className="font-inter font-medium text-black dark:text-white text-xs">DebugView</span>
             </div>
             <div className="flex gap-2 items-center">
@@ -161,7 +161,7 @@ function GA4Visual() {
 
               {/* 0 new bubble */}
               <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} className="mb-3 z-20">
-                <div className="w-10 h-10 rounded-full bg-[#1A73E8] flex flex-col items-center justify-center shadow-md">
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex flex-col items-center justify-center shadow-md">
                   <span className="text-white text-[13px] font-bold leading-none mt-1">0</span>
                   <span className="text-white/90 text-[9px] font-medium leading-none mb-1">new</span>
                 </div>
@@ -184,7 +184,7 @@ function GA4Visual() {
                       {ev.time}
                     </span>
                     {/* Circle icon — sits exactly on the centre line */}
-                    <div className="w-5 h-5 rounded-full bg-[#1A73E8] flex items-center justify-center shrink-0 z-10">
+                    <div className="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center shrink-0 z-10">
                       <Pointer className="w-2.5 h-2.5 text-white" />
                     </div>
                     {/* Event name */}
@@ -259,10 +259,10 @@ function FlowchartVisual() {
         </svg>
 
         {/* Central GTM Server */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-2xl shadow-[0_0_30px_rgba(36,111,219,0.2)]">
-          <div className="w-full h-full bg-[#0A0D14] rounded-2xl flex items-center justify-center">
-            <div className="w-full h-full bg-[#246FDB]/10 border border-[#246FDB]/30 rounded-2xl flex flex-col items-center justify-center">
-              <SiGoogletagmanager className="w-7 h-7 text-[#246FDB] mb-1" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-2xl shadow-[0_0_30px_rgba(var(--brand-gtm),0.2)]">
+          <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
+            <div className="w-full h-full bg-brand-gtm/10 border border-brand-gtm/30 rounded-2xl flex flex-col items-center justify-center">
+              <SiGoogletagmanager className="w-7 h-7 text-brand-gtm mb-1" />
               <span className="text-[9px] font-bold text-white/80">sGTM</span>
             </div>
           </div>
@@ -275,9 +275,9 @@ function FlowchartVisual() {
            transition={{ delay: 0.3 }}
            className="absolute top-[10%] left-[10%] z-20 w-14 h-14 rounded-2xl"
         >
-          <div className="w-full h-full bg-[#0A0D14] rounded-2xl flex items-center justify-center">
-             <div className="w-full h-full bg-[#0668E1]/10 border border-[#0668E1]/30 rounded-2xl flex items-center justify-center">
-               <SiMeta className="w-6 h-6 text-[#0668E1]" />
+          <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
+             <div className="w-full h-full bg-brand-meta/10 border border-brand-meta/30 rounded-2xl flex items-center justify-center">
+               <SiMeta className="w-6 h-6 text-brand-meta" />
              </div>
           </div>
         </motion.div>
@@ -289,9 +289,9 @@ function FlowchartVisual() {
            transition={{ delay: 0.5 }}
            className="absolute top-[10%] right-[10%] z-20 w-14 h-14 rounded-2xl"
         >
-          <div className="w-full h-full bg-[#0A0D14] rounded-2xl flex items-center justify-center">
-             <div className="w-full h-full bg-[#F9AB00]/10 border border-[#F9AB00]/30 rounded-2xl flex items-center justify-center">
-               <SiGoogleads className="w-6 h-6 text-[#F9AB00]" />
+          <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
+             <div className="w-full h-full bg-brand-google-ads/10 border border-brand-google-ads/30 rounded-2xl flex items-center justify-center">
+               <SiGoogleads className="w-6 h-6 text-brand-google-ads" />
              </div>
           </div>
         </motion.div>
@@ -303,9 +303,9 @@ function FlowchartVisual() {
            transition={{ delay: 0.7 }}
            className="absolute bottom-[10%] left-[10%] z-20 w-14 h-14 rounded-2xl"
         >
-          <div className="w-full h-full bg-[#0A0D14] rounded-2xl flex items-center justify-center">
-            <div className="w-full h-full bg-[#F9AB00]/10 border border-[#F9AB00]/30 rounded-2xl flex items-center justify-center">
-               <SiGoogleanalytics className="w-5 h-5 text-[#F9AB00]" />
+          <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
+            <div className="w-full h-full bg-brand-google-analytics/10 border border-brand-google-analytics/30 rounded-2xl flex items-center justify-center">
+               <SiGoogleanalytics className="w-5 h-5 text-brand-google-analytics" />
             </div>
           </div>
         </motion.div>
@@ -317,9 +317,9 @@ function FlowchartVisual() {
            transition={{ delay: 0.9 }}
            className="absolute bottom-[10%] right-[10%] z-20 w-14 h-14 rounded-2xl"
         >
-          <div className="w-full h-full bg-[#0A0D14] rounded-2xl flex items-center justify-center">
-            <div className="w-full h-full bg-[#FF7A59]/10 border border-[#FF7A59]/30 rounded-2xl flex items-center justify-center">
-               <SiHubspot className="w-6 h-6 text-[#FF7A59]" />
+          <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
+            <div className="w-full h-full bg-brand-hubspot/10 border border-brand-hubspot/30 rounded-2xl flex items-center justify-center">
+               <SiHubspot className="w-6 h-6 text-brand-hubspot" />
             </div>
           </div>
         </motion.div>
@@ -332,7 +332,7 @@ function FlowchartVisual() {
 function DashboardVisual() {
   return (
     <div className="w-full h-full flex items-center justify-center relative z-10 w-full max-w-lg">
-      <div className="w-full bg-[#0c0e12] border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
+      <div className="w-full bg-background/80 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-6 flex flex-col gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
          {/* Subtle animated background gradient */}
          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-30" />
          

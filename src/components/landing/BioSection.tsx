@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function BioSection() {
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5 overflow-hidden">
+    <section id="nosotros" className="py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
