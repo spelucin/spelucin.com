@@ -6,23 +6,23 @@ import { Search, Settings, Server, Database } from 'lucide-react';
 const solutions = [
   {
     icon: Search,
-    title: 'Auditorías de medición',
-    description: 'Diagnóstico de **fallos críticos** y fugas de señal en toda tu infraestructura. Identificamos dónde se rompe la atribución para que recuperes la **certeza total** en tus datos.',
+    title: 'Auditorías de medición.',
+    description: 'Investigación profunda para detectar eventos duplicados, errores de atribución y discrepancias entre plataformas y backend.',
   },
   {
     icon: Settings,
-    title: 'Implementación técnica',
-    description: 'Arquitectura **robusta y escalable**, diseñada específicamente para el ecosistema de agencias. Aseguramos que cada evento se rastree con **precisión clínica**.',
+    title: 'Implementación de sistemas.',
+    description: 'Diseño de infraestructuras robustas mediante planes de medición técnicos que aseguran capturas exactas desde el primer día.',
   },
   {
     icon: Server,
-    title: 'Medición server-side',
-    description: 'Soluciones avanzadas para **evadir bloqueadores** y restricciones de iOS. Recuperamos hasta un **40% más de conversiones** que la medición tradicional.',
+    title: 'Medición server-side.',
+    description: 'Infraestructura propia para mitigar el bloqueo de cookies y recuperar la señal perdida ante el fin de las cookies de terceros.',
   },
   {
     icon: Database,
-    title: 'Integración de datos',
-    description: 'Unificación de fuentes para una **verdad única**. Conectamos tus plataformas de media con GTM y GA4 para una **visibilidad 360°** del rendimiento.',
+    title: 'Integración de datos.',
+    description: 'Integración de fuentes (Ads y CRM) para una verdad única, eliminando el ruido técnico en tus procesos de toma de decisiones.',
   },
 ];
 
@@ -39,14 +39,11 @@ export default function SolutionGrid() {
           className="text-left mb-20 md:mb-24"
         >
           <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-            SOLUCIONES ///
+            servicios ///
           </span>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05] mb-8 max-w-4xl">
-            Medición de vanguardia.
+            Ingeniería de medición aplicada.
           </h2>
-          <p className="text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter max-w-4xl">
-            Valoramos la precisión técnica porque sabemos que no solo atrae mejores decisiones, sino que otorga a tu agencia una ventaja competitiva real. Hemos optimizado nuestros procesos de auditoría e implementación para integrarnos con tu equipo de media de forma natural.
-          </p>
         </motion.div>
 
         {/* Layout de cuadrícula dinámica (2 columnas por fila) */}
@@ -75,9 +72,7 @@ export default function SolutionGrid() {
 
               {/* Descripción enfocada en palabras clave */}
               <p className="text-sm sm:text-base text-white/40 leading-relaxed font-inter group-hover:text-white/60 transition-colors max-w-xl">
-                {item.description.split('**').map((part, index) => (
-                  index % 2 === 1 ? <strong key={index} className="text-white/90 font-bold">{part}</strong> : part
-                ))}
+                {item.description}
               </p>
             </motion.div>
           ))}

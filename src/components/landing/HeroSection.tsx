@@ -39,7 +39,7 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             className="mb-8"
           >
             <span className="text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold">
-              Estrategia de Medición ///
+              introducción ///
             </span>
           </motion.div>
 
@@ -61,7 +61,7 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             className="max-w-xl text-sm sm:text-base text-white/60 leading-relaxed mb-10 font-inter"
           >
             Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición. 
-            Aseguro que la infraestructura técnica sea impecable, veraz y resistente a los cambios.
+            Aseguro que la infraestructura técnica sea impecable, veraz y resistente a los cambios del ecosistema.
           </motion.p>
 
           {/* Botones - Estilo con Acento y Gatillo Dinámico */}
@@ -75,17 +75,20 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
               onClick={onOpenCalModal}
               className="px-10 py-4 bg-primary text-primary-foreground font-inter font-bold text-[12px] uppercase tracking-[0.2em] rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
             >
-              Comenzar ahora
+              Agendar llamada
             </button>
             <a
               href="#soluciones"
               className="px-10 py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[12px] uppercase tracking-[0.2em] rounded-full hover:bg-white/10 transition-all text-center"
             >
-              Saber más
+              Explorar soluciones
             </a>
           </motion.div>
 
           {/* Logotipos */}
+          <div className="mb-4">
+            <p className="text-white/40 text-xs sm:text-sm font-inter">Confían en nuestra integridad técnica:</p>
+          </div>
           <div className="flex items-center gap-8 md:gap-14 flex-wrap select-none opacity-40">
             {clientLogos.map((logo) => (
               <div key={logo.name} className="brightness-0 invert hover:opacity-100 transition-all duration-500 flex items-center">

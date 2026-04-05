@@ -10,9 +10,6 @@ export default function Footer() {
             alt="Alex Spelucin Logo" 
             className="h-6 w-auto opacity-30"
           />
-          <span className="text-xs font-inter text-muted-foreground/60">
-            Alex Spelucin
-          </span>
         </div>
 
         <p className="text-xs font-inter text-muted-foreground/50 text-center">

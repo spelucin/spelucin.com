@@ -1,0 +1,74 @@
+METADATA SEO
+
+Page Title: Alex Spelucin  - Consultor de Analítica Digital para Agencias Meta Description: Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.
+
+
+SECCIÓN 1: HERO
+
+Eyebrow (Mono): /introducción
+Titular (H1): Tus decisiones son tan buenas como tus datos.
+Cuerpo: Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición. Aseguro que la infraestructura técnica sea impecable, veraz y resistente a los cambios del ecosistema.
+CTA Primario: Agendar llamada
+CTA Secundario: Explorar soluciones
+
+SECCIÓN 2: TRUST BAR
+
+Texto sutil: Confían en nuestra integridad técnica:
+[Logos de Agencias en escala de grises]
+
+SECCIÓN 3: EL PROBLEMA
+
+Eyebrow (Mono): /el_problema
+Titular: Estás perdiendo entre el 45% y el 100% de tus conversiones reales.
+Cuerpo: Tu agencia pierde entre 5 y 10 veces más ingresos por datos inexactos de lo que costaría una solución profesional. Debido a las restricciones de los navegadores y el bloqueo de anuncios, estás optimizando presupuestos sobre una base de datos ficticia.
+
+SECCIÓN 4: LA SOLUCIÓN
+
+Eyebrow (Mono): /servicios
+Titular: Ingeniería de medición aplicada.
+
+Card 1 | Auditorías de medición.
+Investigación profunda para detectar eventos duplicados, errores de atribución y discrepancias entre plataformas y backend.
+
+Card 2 | Implementación de sistemas.
+Diseño de infraestructuras robustas mediante planes de medición técnicos que aseguran capturas exactas desde el primer día.
+
+Card 3 | Medición server-side.
+Infraestructura propia para mitigar el bloqueo de cookies y recuperar la señal perdida ante el fin de las cookies de terceros.
+
+Card 4 | Integración de datos. Integracuión de fuentes (Ads y CRM) para una verdad única, eliminando el ruido técnico en tus procesos de toma de decisiones.
+
+SECCIÓN 5: TESTIMONIOS
+
+Eyebrow (Mono): /feedback
+Cita 1: "Recuperamos la visibilidad del 25% de nuestras ventas que las plataformas simplemente no veían. Alex es nuestro brazo técnico de confianza."
+Cita 2: "Dejamos de discutir por los números en las reuniones de reporte. Ahora la data es irrefutable y el cliente lo nota."
+
+SECCIÓN 6: ACERCA DE MÍ
+
+Eyebrow (Mono): /nosotros
+Titular: Rigor técnico para el marketing de alto rendimiento.
+Cuerpo: Cuento con 7 años de trayectoria resolviendo la complejidad técnica que impide a las agencias crecer con autoridad. Mi propósito es eliminar la incertidumbre operativa para que los equipos estratégicos dediquen su energía exclusivamente al negocio. No instalo etiquetas, construyo la infraestructura que protege la inversión de tus clientes.
+
+SECCIÓN 7: MODELOS DE INVERSIÓN
+
+Eyebrow (Mono): /precios
+Titular: Planes diseñados para escalar.
+
+(calculadora sin cambios en copY)
+
+Nota de negocio: El Setup Fee se reduce automáticamente al subir de nivel para priorizar nuestra relación como socios comerciales.
+
+SECCIÓN 8: CONTACTO
+
+Eyebrow (Mono): /contacto
+Titular: Mejoramos tu medición hoy mismo.
+Cuerpo: Agenda una sesión de 20 minutos para un diagnóstico técnico preliminar. Revisaremos tu caso actual sin compromisos y con total transparencia.
+CTA: Reservar diagnóstico técnico
+
+FOOTER
+
+Logo: Alex Spelucin | Measurement Strategy
+Créditos: Hecho con ❤ en Lima, Perú.
+Contacto: hola@spelucin.com
+Estado: Asegurando la integridad de los datos en tiempo real.

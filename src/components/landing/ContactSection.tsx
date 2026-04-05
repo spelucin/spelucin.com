@@ -21,7 +21,7 @@ export default function ContactSection({ onOpenCalModal }: ContactSectionProps) 
           className="max-w-3xl"
         >
           <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-            CONTACTO ///
+            contacto ///
           </span>
           <h2 className="font-inter font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tighter leading-[1.05] mb-8">
             Mejoramos tu medición hoy mismo.
@@ -35,7 +35,7 @@ export default function ContactSection({ onOpenCalModal }: ContactSectionProps) 
               onClick={onOpenCalModal}
               className="px-10 py-4 bg-primary text-primary-foreground font-inter font-bold text-[12px] rounded-full hover:opacity-90 shadow-2xl shadow-primary/20 transition-all uppercase tracking-[0.2em]"
             >
-              Agendar llamada de diagnóstico ///
+              Reservar diagnóstico técnico ///
             </button>
           </div>
         </motion.div>

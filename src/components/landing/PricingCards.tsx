@@ -89,13 +89,13 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
           className="text-left mb-16 max-w-2xl"
         >
           <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-            CALCULADORA DE INVERSIÓN ///
+            precios ///
           </span>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
-            Tu nivel de colaboración.
+            Planes diseñados para escalar.
           </h2>
           <p className="mt-8 text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter">
-            Usa el selector para ver la inversión mensual y de implementación basada en el volumen de tu agencia.
+            Usa el selector para ver la inversión mensual y el Setup Fee. Nota de negocio: El Setup Fee se reduce automáticamente al subir de nivel para priorizar nuestra relación como socios comerciales.
           </p>
         </motion.div>
 

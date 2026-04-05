@@ -6,8 +6,29 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Alex Spelucin | Agency Growth Consultant',
-  description: 'Consultoría estratégica para agencias de marketing y publicidad.',
+  title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
+  description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
+  metadataBase: new URL('https://spelucin.com'),
+  openGraph: {
+    title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
+    description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
+    type: 'website',
+    url: 'https://spelucin.com',
+    images: [
+      {
+        url: '/img/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Alex Spelucin - Consultor de Analítica Digital'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alex Spelucin - Consultor de Analítica Digital para Agencias',
+    description: 'Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición mediante infraestructura técnica avanzada, GTM Server-Side y Meta CAPI.',
+    images: ['/img/og-image.png'],
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -21,6 +42,18 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 }
 
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alex Spelucin",
+  "jobTitle": "Consultor de Analítica Digital",
+  "url": "https://spelucin.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/spelucin/",
+    "https://github.com/spelucin"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -28,6 +61,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
         <Toaster />

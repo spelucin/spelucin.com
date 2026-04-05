@@ -6,7 +6,9 @@ import FAQSection from '@/components/landing/FAQSection';
 import HeroSection from '@/components/landing/HeroSection';
 import ProblemSection from '@/components/landing/ProblemSection';
 import SolutionGrid from '@/components/landing/SolutionGrid';
+import ProcessSection from '@/components/landing/ProcessSection';
 import Testimonials from '@/components/landing/Testimonials';
+import BioSection from '@/components/landing/BioSection';
 import PricingCards from '@/components/landing/PricingCards';
 import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
@@ -24,7 +26,9 @@ export default function Home() {
       <HeroSection onOpenCalModal={openCalModal} />
       <ProblemSection onOpenCalModal={openCalModal} />
       <SolutionGrid />
+      <ProcessSection />
       <Testimonials />
+      <BioSection />
       <PricingCards onOpenCalModal={openCalModal} />
       <FAQSection />
       <ContactSection onOpenCalModal={openCalModal} />

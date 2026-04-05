@@ -108,10 +108,10 @@ export default function CalModal({ isOpen, onClose }: CalModalProps) {
             </div>
 
             {/* Cal.com Embed Container */}
-            <div className="flex-1 w-full bg-[#111] px-2 sm:px-4 pb-12">
+            <div className="flex-1 min-h-0 w-full bg-[#111] px-2 sm:px-4 pb-12 overflow-y-auto scrollbar-hide">
               <div 
                 id="my-cal-inline-diagnostico" 
-                className="w-full h-full overflow-y-auto scrollbar-hide rounded-2xl"
+                className="w-full min-h-full"
               />
             </div>
           </motion.div>

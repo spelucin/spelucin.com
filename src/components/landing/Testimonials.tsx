@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "La precisión de nuestros datos pasó del 60% al 98% en solo un mes. Fue el cambio más rentable del año.",
+    quote: "Recuperamos la visibilidad del 25% de nuestras ventas que las plataformas simplemente no veían. Alex es nuestro brazo técnico de confianza.",
     author: "Ricardo Gómez",
     role: "CEO en Marketing Hub",
   },
   {
-    quote: "Por fin tenemos una infraestructura de medición que no se rompe con cada actualización de Google o Facebook.",
+    quote: "Dejamos de discutir por los números en las reuniones de reporte. Ahora la data es irrefutable y el cliente lo nota.",
     author: "Mariana Costa",
     role: "Directora de Paid Media",
   },
@@ -27,7 +27,7 @@ export default function Testimonials() {
           className="text-left mb-20 max-w-2xl"
         >
           <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-            TESTIMONIOS ///
+            feedback ///
           </span>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
             Resultados que hablan por sí mismos.

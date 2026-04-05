@@ -44,7 +44,7 @@ export default function FAQSection() {
             <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
               Resolviendo tus dudas.
             </h2>
-            <p className="mt-8 text-sm text-white/40 leading-relaxed font-inter max-w-sm">
+            <p className="mt-8 text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter max-w-sm">
               Todo lo que necesitas saber sobre el proceso de optimización, implementación y consultoría estratégica de datos.
             </p>
           </motion.div>
