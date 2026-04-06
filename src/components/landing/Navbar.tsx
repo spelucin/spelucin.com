@@ -43,7 +43,7 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
     <>
       {/* 1. Logo deslizable (Sólo escritorio, absoluto al inicio) */}
       <div className="absolute top-0 left-0 right-0 z-40 hidden md:block px-6 sm:px-12 py-6 pointer-events-none">
-        <div className="max-w-6xl mx-auto pointer-events-auto">
+        <div className="max-w-6xl mx-auto flex items-center h-12 pointer-events-auto">
           {logoMarkup}
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-12 py-6 pointer-events-none"
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto flex items-center justify-between h-12">
           
           {/* Diseño Móvil (Logo + CTA dentro de una pill única) */}
           <div className="md:hidden w-full pointer-events-auto">
