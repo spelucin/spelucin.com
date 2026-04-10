@@ -39,3 +39,6 @@ next-env.d.ts
 .vite
 dist
 dist-ssr
+
+
+/docs
