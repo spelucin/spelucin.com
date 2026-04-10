@@ -34,8 +34,8 @@ export default function SolutionGrid() {
   return (
     <section id="soluciones" className="relative py-24 sm:py-32 px-6 sm:px-12 border-t border-border bg-background overflow-hidden">
       {/* Background Texture Accents */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
@@ -55,8 +55,11 @@ export default function SolutionGrid() {
             </span>
           </div>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05] mb-8 max-w-3xl">
-            Sistemas ingeniería diseñados para <span className="text-primary italic">escalar</span>.
+            Sistemas ingeniería diseñados para escalar.
           </h2>
+          <p className="text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter max-w-3xl">
+            No se trata solo de configurar herramientas, sino de crear activos de información que sostengan el crecimiento de tu negocio a largo plazo.
+          </p>
         </motion.div>
 
         {/* Layout de cuadrícula dinámica */}
@@ -72,13 +75,13 @@ export default function SolutionGrid() {
             >
               {/* Card Container */}
               <div className="relative h-full p-8 rounded-3xl bg-card/20 backdrop-blur-xl border border-white/5 overflow-hidden transition-all duration-500 group-hover:border-primary/30 group-hover:bg-card/40 group-hover:shadow-[0_0_40px_rgba(var(--primary),0.05)]">
-                
+
                 {/* Background Accent Shimmer */}
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
-                
+
                 {/* Step Number Badge */}
                 <div className="absolute top-6 right-8 font-mono text-3xl font-black text-white/[0.03] group-hover:text-primary/10 transition-colors duration-500">
-                   {item.step}
+                  {item.step}
                 </div>
 
                 <div className="flex flex-col h-full">
