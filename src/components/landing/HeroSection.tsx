@@ -62,8 +62,7 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-sm sm:text-base text-white/60 leading-relaxed mb-10 font-inter"
           >
-            Ayudo a agencias de marketing en Latinoamérica a recuperar la certeza en su medición. 
-            Aseguro que la infraestructura técnica sea impecable, veraz y resistente a los cambios del ecosistema.
+            Ayudo a agencias y equipos de marketing a construir sistemas de medición que transforman la incertidumbre en rentabilidad. No instalo etiquetas, construyo la base para que cada dólar invertido sea rastreado y validado.
           </motion.p>
 
           {/* Botones - Estilo con Acento y Gatillo Dinámico */}
@@ -73,20 +72,20 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-row items-center justify-start gap-4 mb-24"
           >
-            <button
-              onClick={() => {
-                onOpenCalModal();
-                sendGTMEvent({ event: 'open_calendar', ubicacion: 'hero' });
-              }}
-              className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20"
-            >
-              Agendar llamada
-            </button>
             <a
-              href="#soluciones"
+              href="#precios"
+              onClick={() => {
+                sendGTMEvent({ event: 'view_plans_click', ubicacion: 'hero' });
+              }}
+              className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20 text-center"
+            >
+              Ver planes
+            </a>
+            <a
+              href="#proceso"
               className="px-6 py-3 sm:px-10 sm:py-4 border border-white/10 bg-white/5 backdrop-blur-md text-white font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:bg-white/10 transition-all text-center"
             >
-              Explorar soluciones
+              Mi método
             </a>
           </motion.div>
 

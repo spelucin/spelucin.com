@@ -7,20 +7,16 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    question: "¿En cuánto tiempo se ven los resultados?",
-    answer: "Los resultados en términos de visibilidad de datos suelen ser inmediatos tras la implementación técnica. La optimización de campañas basada en estos nuevos datos suele mostrar mejoras significativas en el ROI en los primeros 30 a 60 días.",
-  },
-  {
-    question: "¿Necesito cambiar mis herramientas actuales?",
-    answer: "No necesariamente. Mi enfoque es optimizar tu stack actual (Google Analytics 4, Tag Manager, Facebook CAPI) y asegurar que trabajen correctamente antes de sugerir herramientas adicionales.",
+    question: "¿Cómo ayuda la IA en mi medición?",
+    answer: "La uso para automatizar la parte operativa, garantizando cero errores y mayor velocidad de entrega. Esto me permite dedicar más tiempo al análisis estratégico que realmente mueve la aguja de tu negocio.",
   },
   {
     question: "¿Qué pasa si ya tengo un equipo técnico?",
-    answer: "Trabajo en conjunto con ellos. Mi rol es estratégico y de especialización profunda. Aporto la arquitectura técnica y las mejores prácticas que ahorran meses de ensayo y error a tu equipo interno.",
+    answer: "Actúo como un consultor estratégico que establece los estándares que ellos deben seguir para ser rentables. Mi rol es elevar su capacidad técnica y asegurar que la arquitectura de datos sea impecable.",
   },
   {
-    question: "¿Cómo garantizan la privacidad de los datos?",
-    answer: "Cumplimos estrictamente con GDPR y leyes locales. La medición server-side que implementamos está diseñada precisamente para respetar la privacidad del usuario mientras recuperamos la atribución necesaria para el negocio.",
+    question: "¿Cuánto tiempo toma ver resultados?",
+    answer: "Un diagnóstico de integridad puede revelar fugas de dinero en menos de 48 horas. La implementación completa de un sistema robusto suele tomar entre 2 y 4 semanas, dependiendo de la complejidad del ecosistema.",
   },
 ];
 

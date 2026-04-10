@@ -6,23 +6,23 @@ import { Search, Settings, Server, Database } from 'lucide-react';
 const solutions = [
   {
     icon: Search,
-    title: 'Auditorías de medición.',
-    description: 'Investigación profunda para detectar eventos duplicados, errores de atribución y discrepancias entre plataformas y backend.',
+    title: 'Diagnóstico de Integridad:',
+    description: 'Encuentro por qué tus números no coinciden y dónde se pierden las ventas.',
   },
   {
     icon: Settings,
-    title: 'Implementación de sistemas.',
-    description: 'Diseño de infraestructuras robustas mediante planes de medición técnicos que aseguran capturas exactas desde el primer día.',
+    title: 'Sistemas de Medición 360:',
+    description: 'Implementación completa de GA4 y seguimiento desde el servidor para máxima fidelidad.',
   },
   {
     icon: Server,
-    title: 'Medición server-side.',
-    description: 'Infraestructura propia para mitigar el bloqueo de cookies y recuperar la señal perdida ante el fin de las cookies de terceros.',
+    title: 'Automatización con IA:',
+    description: 'Uso tecnología propia para eliminar errores humanos y acelerar el despliegue técnico.',
   },
   {
     icon: Database,
-    title: 'Integración de datos.',
-    description: 'Integración de fuentes (Ads y CRM) para una verdad única, eliminando el ruido técnico en tus procesos de toma de decisiones.',
+    title: 'Traducción de Negocio:',
+    description: 'Convierto la complejidad técnica en insights claros para tu equipo de marketing.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function SolutionGrid() {
             servicios ///
           </span>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05] mb-8 max-w-4xl">
-            Ingeniería de medición aplicada.
+            Sistemas diseñados para escalar.
           </h2>
         </motion.div>
 

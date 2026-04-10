@@ -1,30 +1,34 @@
 "use client"
 
 import { motion } from 'framer-motion';
-import { SiMeta, SiGoogleads, SiGoogleanalytics, SiGoogletagmanager, SiHubspot } from 'react-icons/si';
-import { TrendingUp, Pointer } from 'lucide-react';
+import { SiMeta, SiGoogleads, SiGoogleanalytics, SiGoogletagmanager, SiHubspot, SiGooglegemini } from 'react-icons/si';
+import { TrendingUp, Pointer, Check } from 'lucide-react';
 
 export default function ProcessSection() {
   const steps = [
     {
-      title: "Captura de Datos",
-      description: "Implementamos un dataLayer robusto para rastrear cada interacción clave que tus clientes hacen en el sitio.",
+      title: "Inmersión Estratégica",
+      description: "Analizo tu modelo de ingresos para identificar las preguntas de negocio que hoy no puedes responder. Aseguramos que cada evento configurado tenga un propósito comercial claro.",
     },
     {
-      title: "Validación en Tiempo Real",
-      description: "Auditamos cada evento asegurando que los parámetros sean precisos antes de enviarlos.",
+      title: "Diseño de la Estructura de Datos",
+      description: "Planifico el entorno técnico con reglas de nombre y eventos bajo estándares globales. Convertimos el caos técnico en un activo de consulta rápida para todo tu equipo.",
     },
     {
-      title: "Distribución Server-Side",
-      description: "Enviamos la data limpia a través de GTM hacia los píxeles de Meta, Google Ads y tu CRM.",
+      title: "Ejecución Técnica con IA",
+      description: "Implemento la solución mediante herramientas de automatización propias. Garantizo precisión absoluta y tiempos de entrega que los métodos manuales no pueden igualar.",
     },
     {
-      title: "Visualización Estratégica",
-      description: "Transformamos los datos limpios en un dashboard accionable, permitiéndote tomar decisiones sin puntos ciegos.",
+      title: "Distribución y Validación",
+      description: "Enviamos la data limpia y validada a través de GTM hacia tus píxeles de pauta y CRM, asegurando que cada parámetro sea exacto antes de su uso.",
+    },
+    {
+      title: "Traducción y Activación",
+      description: "Traduzco la complejidad técnica en conclusiones accionables. Te enseño a leer tu sistema para que ajustes tus campañas basándote en la realidad financiera de tu negocio.",
     }
   ];
 
-  const visuals = [DataLayerVisual, GA4Visual, FlowchartVisual, DashboardVisual];
+  const visuals = [ChecklistVisual, DataLayerVisual, GeminiVisual, FlowchartVisual, DashboardVisual];
 
   return (
     <section id="proceso" className="relative bg-background border-t border-border pt-24 sm:pt-32 pb-12 sm:pb-16 px-6 sm:px-12">
@@ -39,13 +43,14 @@ export default function ProcessSection() {
             PROCESO ///
           </span>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05] mb-6 max-w-3xl">
-            De la recolección a la visualización.
+            Un proceso diseñado para que los datos trabajen para ti.
           </h2>
           <p className="text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter max-w-3xl">
             Descubre cómo transformamos datos en bruto en decisiones seguras. A continuación, verás nuestro ecosistema técnico en acción, diseñado para eliminar fugas y maximizar el retorno de inversión iterando en cada pilar.
           </p>
         </motion.div>
       </div>
+
 
       <div className="max-w-6xl mx-auto flex flex-col gap-12 md:gap-20 pb-4 md:pb-8">
         {steps.map((step, index) => {
@@ -235,24 +240,24 @@ function FlowchartVisual() {
           <path id="line-bl" d="M 50 50 Q 50 84 16 84" stroke="white" strokeOpacity="0.15" strokeWidth="0.8" fill="none" strokeDasharray="3 4" />
           <path id="line-br" d="M 50 50 Q 50 84 84 84" stroke="white" strokeOpacity="0.15" strokeWidth="0.8" fill="none" strokeDasharray="3 4" />
 
-          {/* Traveling Dots */}
+          {/* Traveling Dots - Slower animation */}
           <circle r="1.5" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="2.5s" repeatCount="indefinite">
+            <animateMotion dur="4s" repeatCount="indefinite" calcMode="linear">
               <mpath href="#line-tl" />
             </animateMotion>
           </circle>
           <circle r="1.5" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite">
+            <animateMotion dur="4.5s" repeatCount="indefinite" calcMode="linear">
               <mpath href="#line-tr" />
             </animateMotion>
           </circle>
           <circle r="1.5" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="2.2s" repeatCount="indefinite">
+            <animateMotion dur="3.8s" repeatCount="indefinite" calcMode="linear">
               <mpath href="#line-bl" />
             </animateMotion>
           </circle>
           <circle r="1.5" fill="#fff" filter="url(#glow)">
-            <animateMotion dur="2.8s" repeatCount="indefinite">
+            <animateMotion dur="4.2s" repeatCount="indefinite" calcMode="linear">
               <mpath href="#line-br" />
             </animateMotion>
           </circle>
@@ -272,7 +277,7 @@ function FlowchartVisual() {
         <motion.div 
            initial={{ opacity: 0, x: 20, y: 20 }}
            whileInView={{ opacity: 1, x: 0, y: 0 }}
-           transition={{ delay: 0.3 }}
+           transition={{ delay: 0.3, duration: 1.5, ease: "easeOut" }}
            className="absolute top-[10%] left-[10%] z-20 w-14 h-14 rounded-2xl"
         >
           <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
@@ -286,7 +291,7 @@ function FlowchartVisual() {
         <motion.div 
            initial={{ opacity: 0, x: -20, y: 20 }}
            whileInView={{ opacity: 1, x: 0, y: 0 }}
-           transition={{ delay: 0.5 }}
+           transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
            className="absolute top-[10%] right-[10%] z-20 w-14 h-14 rounded-2xl"
         >
           <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
@@ -300,7 +305,7 @@ function FlowchartVisual() {
         <motion.div 
            initial={{ opacity: 0, x: 20, y: -20 }}
            whileInView={{ opacity: 1, x: 0, y: 0 }}
-           transition={{ delay: 0.7 }}
+           transition={{ delay: 0.7, duration: 1.5, ease: "easeOut" }}
            className="absolute bottom-[10%] left-[10%] z-20 w-14 h-14 rounded-2xl"
         >
           <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
@@ -314,7 +319,7 @@ function FlowchartVisual() {
         <motion.div 
            initial={{ opacity: 0, x: -20, y: -20 }}
            whileInView={{ opacity: 1, x: 0, y: 0 }}
-           transition={{ delay: 0.9 }}
+           transition={{ delay: 0.9, duration: 1.5, ease: "easeOut" }}
            className="absolute bottom-[10%] right-[10%] z-20 w-14 h-14 rounded-2xl"
         >
           <div className="w-full h-full bg-card rounded-2xl flex items-center justify-center">
@@ -325,6 +330,58 @@ function FlowchartVisual() {
         </motion.div>
       </div>
 
+    </div>
+  );
+}
+
+function ChecklistVisual() {
+  const items = [
+    { label: "Costo de Adquisición (CAC)", checked: true },
+    { label: "Valor de Vida del Cliente (LTV)", checked: true },
+    { label: "Retorno de Inversión (ROI)", checked: true },
+    { label: "Tasa de Conversión", checked: true },
+    { label: "Margen de Contribución", checked: false },
+  ];
+
+  return (
+    <div className="w-full h-full flex items-center justify-center p-4">
+      <div className="w-full max-w-[280px] bg-card border border-white/10 rounded-2xl p-6 shadow-2xl relative overflow-hidden group">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50" />
+        <div className="relative z-10 space-y-4">
+          <div className="text-[10px] font-mono text-primary tracking-widest uppercase mb-4 font-bold">KPIs Estratégicos ///</div>
+          {items.map((item, i) => (
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, x: -10 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ delay: i * 0.1 }}
+              className="flex items-center gap-3"
+            >
+              <div className={`w-4 h-4 rounded border ${item.checked ? 'bg-primary border-primary flex items-center justify-center' : 'border-white/20'}`}>
+                {item.checked && <Check className="w-2.5 h-2.5 text-primary-foreground" />}
+              </div>
+              <span className={`text-xs font-inter ${item.checked ? 'text-white/80' : 'text-white/30'}`}>{item.label}</span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GeminiVisual() {
+  return (
+    <div className="w-full h-full flex items-center justify-center relative">
+      <motion.div
+        animate={{ 
+          scale: [1, 1.05, 1],
+          opacity: [0.7, 1, 0.7]
+        }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="relative z-10 p-4 rounded-3xl bg-white/[0.03] border border-white/5"
+      >
+        <SiGooglegemini className="w-16 h-16 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+      </motion.div>
     </div>
   );
 }
@@ -357,7 +414,7 @@ function DashboardVisual() {
                  key={i}
                  initial={{ opacity: 0, y: 10 }}
                  whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.3 + kpi.delay, duration: 0.5 }}
+                 transition={{ delay: 0.3 + kpi.delay, duration: 1, ease: "easeOut" }}
                  className="bg-white/5 backdrop-blur-md rounded-xl p-3 sm:p-4 border border-white/5 relative overflow-hidden group hover:bg-white/10 transition-colors"
               >
                  <div className="text-white/40 text-[10px] sm:text-xs font-medium mb-1">{kpi.label}</div>
@@ -365,8 +422,6 @@ function DashboardVisual() {
                  <div className={`text-[10px] flex items-center gap-1 mt-2 font-medium ${kpi.down ? 'text-red-400' : 'text-emerald-400'}`}>
                    <TrendingUp className={`w-3 h-3 ${kpi.down ? 'rotate-180' : ''}`} /> {kpi.trend}
                  </div>
-                 {/* Hover effect glow */}
-                 <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]" />
               </motion.div>
             ))}
          </div>
@@ -390,17 +445,11 @@ function DashboardVisual() {
                <motion.div
                  initial={{ height: "0%" }}
                  whileInView={{ height: bar.h }}
-                 transition={{ duration: 0.8, delay: 0.5 + (i * 0.03), ease: "easeOut" }}
+                 transition={{ duration: 1.5, delay: 0.5 + (i * 0.03), ease: "easeOut" }}
                  className="w-full rounded-t-sm bg-gradient-to-t from-primary/40 to-primary/80 relative"
                >
-                 {/* Top cap highlight */}
                  <div className="absolute top-0 inset-x-0 h-1 bg-white/30 rounded-t-sm" />
                </motion.div>
-               
-               {/* Hover tooltip simulation */}
-               <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
-                 {bar.h}
-               </div>
              </div>
            ))}
          </div>

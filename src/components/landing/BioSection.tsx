@@ -22,12 +22,12 @@ export default function BioSection() {
                 nosotros ///
               </span>
               <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
-                Rigor técnico para el marketing de alto rendimiento.
+                Estrategia para el marketing de alto rendimiento.
               </h2>
             </div>
             
             <p className="text-white/60 text-base sm:text-lg leading-relaxed font-inter">
-              Cuento con 7 años de trayectoria resolviendo la complejidad técnica que impide a las agencias crecer con autoridad. Mi propósito es eliminar la incertidumbre operativa para que los equipos estratégicos dediquen su energía exclusivamente al negocio. No instalo etiquetas, construyo la infraestructura que protege la inversión de tus clientes.
+              Mi nombre es Alex Spelucin. Me defino por la curiosidad para observar patrones, el rigor para estandarizar procesos y la capacidad de explicar lo complejo de forma simple. No soy un implementador más, soy el socio técnico que tu equipo necesita para dejar de adivinar.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">

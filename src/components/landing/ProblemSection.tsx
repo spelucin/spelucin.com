@@ -27,11 +27,10 @@ export default function ProblemSection({ onOpenCalModal }: ProblemSectionProps) 
               el problema ///
             </span>
             <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white leading-[1.05] mb-8 tracking-tighter">
-              Estás perdiendo entre el 45% y el 100% de tus conversiones reales.
+              Estás perdiendo entre el 40% y el 100% de tus conversiones reales.
             </h2>
             <p className="text-white/60 text-sm sm:text-base leading-relaxed font-inter mb-0">
-              Tu agencia pierde entre 5 y 10 veces más ingresos por datos inexactos de lo que costaría una solución profesional.
-              Debido a las restricciones de los navegadores y el bloqueo de anuncios, estás optimizando presupuestos sobre una base de datos ficticia.
+              La mayoría de las empresas operan a ciegas porque sus sistemas de medición mienten. Sin una estructura de datos estandarizada, la atribución se rompe, los reportes no cuadran y terminas tomando decisiones basadas en suposiciones, no en hechos.
             </p>
           </div>
         </motion.div>
