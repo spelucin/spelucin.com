@@ -34,16 +34,12 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
       <div className="relative z-10 w-full max-w-6xl mx-auto">
         <div className="max-w-3xl text-left">
           {/* Insignia */}
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-8 h-[1px] bg-primary/50" />
             <span className="text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold">
               introducción ///
             </span>
-          </motion.div>
+          </div>
 
           {/* Encabezado */}
           <motion.h1

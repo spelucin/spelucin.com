@@ -55,7 +55,12 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
     <section id="precios" className="py-24 px-6 sm:px-12 border-t border-white/5 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-left mb-16 max-w-2xl">
-          <span className="text-[10px] font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6 block">precios ///</span>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-[1px] bg-primary/50" />
+            <span className="text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold">
+              precios ///
+            </span>
+          </div>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter mb-8">Planes para escalar.</h2>
           <p className="text-white/40 text-sm sm:text-base md:text-lg leading-relaxed font-inter">
             Inversión transparente para resultados medibles. Planes diseñados para acompañar el crecimiento de tu negocio o agencia con rigor técnico y escala operativa.

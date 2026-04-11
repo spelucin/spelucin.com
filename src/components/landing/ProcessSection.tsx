@@ -39,9 +39,12 @@ export default function ProcessSection() {
            viewport={{ once: true }}
            transition={{ duration: 0.7 }}
         >
-          <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-            PROCESO ///
-          </span>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-[1px] bg-primary/50" />
+            <span className="text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold">
+              PROCESO ///
+            </span>
+          </div>
           <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05] mb-6 max-w-3xl">
             Un proceso diseñado para que los datos trabajen para ti.
           </h2>

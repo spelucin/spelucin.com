@@ -18,9 +18,12 @@ export default function BioSection() {
             className="flex flex-col gap-8 order-2 lg:order-1"
           >
             <div>
-              <span className="inline-block text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold mb-6">
-                nosotros ///
-              </span>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-[1px] bg-primary/50" />
+                <span className="text-[10px] sm:text-xs font-mono text-primary tracking-[0.3em] uppercase font-bold">
+                  nosotros ///
+                </span>
+              </div>
               <h2 className="font-inter font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tighter leading-[1.05]">
                 Estrategia para el marketing de alto rendimiento.
               </h2>
