@@ -75,7 +75,7 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
               <button
                 onClick={() => {
                   onOpenCalModal();
-                  sendGTMEvent({ event: 'open_calendar', ubicacion: 'nav' });
+                  sendGTMEvent({ event: 'open_calendar', location: 'nav' });
                 }}
                 className="px-4 py-1.5 text-[11px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity tracking-tight"
               >
@@ -107,7 +107,7 @@ export default function Navbar({ onOpenCalModal }: NavbarProps) {
             <button
               onClick={() => {
                 onOpenCalModal();
-                sendGTMEvent({ event: 'open_calendar', ubicacion: 'nav' });
+                sendGTMEvent({ event: 'open_calendar', location: 'nav' });
               }}
               className="ml-1 px-6 py-2 text-[13px] font-inter font-bold bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all shadow-sm tracking-tight"
             >

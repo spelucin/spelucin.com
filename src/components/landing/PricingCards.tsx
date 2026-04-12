@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 const tiers = [
   {
@@ -109,7 +110,12 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
               ))}
             </ul>
 
-            <button onClick={onOpenCalModal} className="w-full py-4 bg-white/5 border border-white/10 text-white rounded-full text-xs font-bold hover:bg-white/10 transition-all">
+            <button 
+              onClick={() => {
+                onOpenCalModal();
+                sendGTMEvent({ event: 'open_calendar', location: 'pricing', project_type: 'agency' });
+              }} 
+              className="w-full py-4 bg-white/5 border border-white/10 text-white rounded-full text-xs font-bold hover:bg-white/10 transition-all">
               Agendar para Agencias
             </button>
           </div>
@@ -137,7 +143,12 @@ export default function PricingCards({ onOpenCalModal }: PricingCardsProps) {
               ))}
             </ul>
 
-            <button onClick={onOpenCalModal} className="w-full py-4 bg-primary text-primary-foreground rounded-full text-xs font-bold hover:opacity-90 transition-all">
+            <button 
+              onClick={() => {
+                onOpenCalModal();
+                sendGTMEvent({ event: 'open_calendar', location: 'pricing', project_type: 'inhouse' });
+              }}
+              className="w-full py-4 bg-primary text-primary-foreground rounded-full text-xs font-bold hover:opacity-90 transition-all">
               Agendar Proyecto
             </button>
           </div>

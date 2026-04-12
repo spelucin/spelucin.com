@@ -38,7 +38,7 @@ export default function ContactSection({ onOpenCalModal }: ContactSectionProps) 
             <button
                onClick={() => {
                  onOpenCalModal();
-                 sendGTMEvent({ event: 'open_calendar', ubicacion: 'final_cta' });
+                 sendGTMEvent({ event: 'open_calendar', location: 'final_cta' });
                }}
                className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] rounded-full hover:opacity-90 shadow-2xl shadow-primary/20 transition-all tracking-tight"
             >

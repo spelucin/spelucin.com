@@ -71,7 +71,7 @@ export default function HeroSection({ onOpenCalModal }: HeroSectionProps) {
             <a
               href="#precios"
               onClick={() => {
-                sendGTMEvent({ event: 'view_plans_click', ubicacion: 'hero' });
+                sendGTMEvent({ event: 'view_plans_click', location: 'hero' });
               }}
               className="px-6 py-3 sm:px-10 sm:py-4 bg-primary text-primary-foreground font-inter font-bold text-[11px] sm:text-[12px] tracking-tight rounded-full hover:opacity-90 transition-all shadow-xl shadow-primary/20 text-center"
             >
